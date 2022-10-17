@@ -1,6 +1,7 @@
 #ifndef IUSER_HPP
 #define IUSER_HPP
 
+#include <iostream>
 #include <string>
 
 class IUser{
