@@ -117,7 +117,6 @@ void GestorTickets::deleteTicket(Ticket ticket)
             std::vector<Ticket>::iterator it;
             it = tickets.begin()+i;
             tickets.erase(it);
-            std::cout << "Ticket borrado" << std::endl;
         }
     }
 }

@@ -14,6 +14,10 @@ int main(){
 	Ticket newTicket2 = g_tickets->createTicket(654231, client1, asistente1);
 	// g_tickets->readTicket(newTicket);
 	g_tickets->listTickets();
+
+	g_tickets->modifyTicket(newTicket2);
+
+	g_tickets->listTickets();
 	
 
 
