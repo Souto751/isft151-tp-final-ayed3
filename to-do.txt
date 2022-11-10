@@ -1,0 +1,4 @@
+1. Add JSON functionality to GestorTickets.cpp and GestorUsers.cpp.
+2. Add db/tickets.json file.
+3. Add "img" folder to "db" folder, containing all DrawIO UML Diagrams.
+4. Add Menu Object containing all Gestores (GestorTickets, GestorNotifications and GestorUsers).
