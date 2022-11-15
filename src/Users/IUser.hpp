@@ -12,7 +12,7 @@ class IUser{
 		virtual std::string getName() = 0;
 		virtual std::string getSurname() = 0;
 		virtual std::string getPhoneNumber() = 0;
-		~IUser(){std::cout << "Usuario destruido" << std::endl;}
+		virtual ~IUser(){std::cout << "Usuario destruido" << std::endl;}
 };
 
 #endif // IUSER_HPP

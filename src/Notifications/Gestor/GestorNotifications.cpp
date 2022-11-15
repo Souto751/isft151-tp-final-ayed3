@@ -1,4 +1,4 @@
-#include <GestorNotifications.hpp>
+#include "GestorNotifications.hpp"
 
 GestorNotifications::GestorNotifications(){
 	std::cout << "Gestor creado" << std::endl;

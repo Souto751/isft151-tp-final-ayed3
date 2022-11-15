@@ -2,9 +2,8 @@
 #define GESTORNOTIFICATIONS_HPP
 
 #include <string>
-#include <INotification.hpp>
-#include <Alert.cpp>
-#include <Query.cpp>
+#include "../Alert/Alert.cpp"
+#include "../Query/Query.cpp"
 #include <iterator>
 #include <list>
 
