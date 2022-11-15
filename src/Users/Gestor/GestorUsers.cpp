@@ -1,4 +1,4 @@
-#include "GestorUsers.hpp"
+#include "./GestorUsers.hpp"
 
 GestorUsers::GestorUsers(){
 	this->user = NULL;
@@ -7,7 +7,7 @@ GestorUsers::GestorUsers(){
 
 bool GestorUsers::login(std::string _username, std::string _password){
 	std::ifstream users_file("./db/users.json");
-	if(users_file.good()){
+	if(users_file.good() && !(users_file.peek() == std::ifstream::traits_type::eof())){
 		json users;
 		users_file >> users;
 		users_file.close();
@@ -49,7 +49,7 @@ bool GestorUsers::registerUser(std::string _username, std::string _password){
 	std::ifstream users_file("./db/users.json");
 	bool exists = false;
 	json users;
-	if(users_file.good()){
+	if(users_file.good() && !(users_file.peek() == std::ifstream::traits_type::eof())){
 		users_file >> users;
 		users_file.close();
 		if(!users.empty()){
@@ -72,13 +72,15 @@ bool GestorUsers::registerUser(std::string _username, std::string _password){
 		users.push_back(new_user);
 
 		this->user = new Client();
-		this->user->setName("username");
+		this->user->setName(_username);
 
 		std::ofstream users_file_save("./db/users.json");
 		if(users_file_save.good()){
 			users_file_save << std::setw(4) << users << std::endl; 
 		}
 		users_file_save.close();
+	}else{
+		std::cout << "Ya existe el usuario." << std::endl; 
 	}
 
 	return !exists;
