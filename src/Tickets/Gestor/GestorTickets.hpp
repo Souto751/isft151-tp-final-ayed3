@@ -24,6 +24,7 @@ class GestorTickets
 
     private:
     std::vector<Ticket> tickets;
+    // Vector o cola?
 };
 
 #endif // GESTORTICKETS_HPP

@@ -94,6 +94,9 @@ bool GestorUsers::isLogged(){
 	return this->user != NULL;
 }
 
+IUser* GestorUsers::getUser(){
+	return this->user;
+}
 
 GestorUsers::~GestorUsers(){
 	delete this->user;

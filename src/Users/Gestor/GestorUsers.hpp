@@ -18,6 +18,7 @@ class GestorUsers{
 		bool registerUser(std::string, std::string);
 		bool logout();
 		bool isLogged();
+		IUser* getUser();
 		~GestorUsers();
 	private:
 		IUser *user;

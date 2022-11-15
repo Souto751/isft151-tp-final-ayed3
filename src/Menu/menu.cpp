@@ -59,7 +59,27 @@ bool Menu::selectOption(){
 }
 
 void Menu::doAction(){
-    std::cout << this->option << std::endl;
+    if(this->option == 1){
+        // MODIFICAR EL METODO PARA PASARLE SOLAMENTE EL OBJETO USUARIO
+        // this->g_tickets->createTicket(this->g_users->getUser());
+    }else if(this->option == 2){
+        // MOSTRAR LA LISTA DE LOS TICKETS CON SU ID, PARA LUEGO SELECCIONAR EL QUE SE QUIERE MOSTRAR
+        // AGREGAR FUNCION PARA OBTENER TICKET PASANDO ID
+        // this->g_tickets->readTicket(this->g_tickets->getTicket(id));
+    }else if(this->option == 3){
+        // MOSTRAR LA LISTA DE LOS TICKETS
+    }else if(this->option == 4){
+        // MOSTRAR LA LISTA DE LOS TICKETS CON SU ID, PARA LUEGO SELECCIONAR EL QUE SE QUIERE MODIFICAR
+        // AGREGAR FUNCION PARA OBTENER TICKET PASANDO ID
+        // this->g_tickets->modifyTicket(this->g_tickets->getTicket(id));
+    }else if(this->option == 5){
+        // MOSTRAR LA LISTA DE LOS TICKETS CON SU ID, PARA LUEGO SELECCIONAR EL QUE SE QUIERE ELIMINAR
+        // AGREGAR FUNCION PARA OBTENER TICKET PASANDO ID
+        // this->g_tickets->deleteTicket(this->g_tickets->getTicket(id));
+    }else if(this->option == 6){
+        // MOSTRAR LA LISTA DE NOTIFICACIONES DEL USUARIO
+        // this->g_notifications->listNotifications();
+    }
     system("pause");
 }
 
@@ -138,6 +158,10 @@ void Menu::run(){
     
     if(this->selectOption()){
         if(this->g_users->isLogged()){
+
+            // AGREGAR MÉTODOS PARA QUE SE RELLENEN TANTO LOS TICKETS COMO LAS NOTIFICACIONES
+            // DE ACUERDO AL USUARIO QUE SE LOGUEO
+
             if(this->option == 7){
                 this->logout();
             }else{

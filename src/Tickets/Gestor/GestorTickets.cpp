@@ -30,6 +30,9 @@ void GestorTickets::listTickets()
 
 Ticket GestorTickets::createTicket(int id, IUser* client, IUser* asistente)
 {
+    // CREAR TICKET DEBERIA IMPLEMENTAR EL "MENU" PARA INGRESAR LOS DATOS,
+    // LEER DEL JSON EL ID DEL ULTIMO OBJETO Y RECIEN AHI CREARLO
+
     Ticket ticket;
     ticket.setId(id);
     ticket.setClient(client);
@@ -52,6 +55,8 @@ void GestorTickets::modifyTicket(Ticket ticket)
             std::string newAsistenteName, newAsistenteSurname, newAsistentePhoneNumber;
             std::string newDescriptionEstado;
             std::string newRequest;
+
+            // REEMPLAZAR STD::CIN CON GETLINE(STD::CIN, VARIABLE)
 
             std::cout << "ID Nueva:" << std::endl;
             std::cin >> newId;
@@ -128,5 +133,6 @@ void GestorTickets::readTicket(Ticket ticket)
 
 GestorTickets::~GestorTickets()
 {
+    // Eliminar todos los tickets
     std::cout << "Gestor Tickets destruido" << std::endl;
 }
