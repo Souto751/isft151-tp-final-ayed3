@@ -1,7 +1,7 @@
 #ifndef CLIENT_HPP
 #define CLIENT_HPP
 
-#include "IUser.hpp"
+#include "../IUser.hpp"
 
 class Client : public IUser{
 	public:
