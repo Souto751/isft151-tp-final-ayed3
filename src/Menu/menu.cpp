@@ -47,7 +47,7 @@ bool Menu::selectOption(){
             return true;
         }
     }else{
-        if(this->option <= 0 || this-> option > 7){
+        if(this->option != 1 && this->option != 2 && this->option != 99){
             std::cout << "Opción incorrecta." << std::endl << std::endl;
             this->option = NULL;
             system("pause");
