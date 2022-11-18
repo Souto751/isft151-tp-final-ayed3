@@ -9,6 +9,10 @@ void Asistente::setName(std::string _name){
 	this->name = _name;
 }
 
+std::string Asistente::getRole(){
+	return "Client";
+}
+
 void Asistente::setSurname(std::string _surname){
 	this->surname = _surname;
 }

@@ -72,6 +72,8 @@ IUpdate* Ticket::getComments()
     {
         std::cout << comments[i]->getDescription() << std::endl;
     }
+
+    return NULL;
 }
 
 IUpdate* Ticket::getQuestions()
@@ -80,9 +82,19 @@ IUpdate* Ticket::getQuestions()
     {
         std::cout << questions[i]->getDescription() << std::endl;
     }
+
+    return NULL;
+}
+
+std::vector<IUpdate*> Ticket::getCommentsList(){
+    return this->comments;
+}
+
+std::vector<IUpdate*> Ticket::getQuestionsList(){
+    return this->questions;
 }
 
 Ticket::~Ticket()
 {
-    std::cout << "Ticket destruido" << std::endl;
+    //std::cout << "Ticket destruido" << std::endl;
 }

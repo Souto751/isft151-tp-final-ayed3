@@ -12,6 +12,7 @@ class Client : public IUser{
 		std::string getName();
 		std::string getSurname();
 		std::string getPhoneNumber();
+		std::string getRole();
 		~Client();
 	private:
 		std::string name, surname, phoneNumber;

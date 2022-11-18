@@ -4,6 +4,7 @@
 
 
 #include "./src/Menu/menu.cpp"
+#include "./src/ScreenCleaner/ScreenCleaner.cpp"
 
 int main(){
 
@@ -36,6 +37,8 @@ int main(){
 	menu->run();
 
 	delete menu;
+
+	clean_screen();
 
 	return 0;
 }

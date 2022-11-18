@@ -11,6 +11,7 @@ class IUser{
 		virtual void setPhoneNumber(std::string) = 0;
 		virtual std::string getName() = 0;
 		virtual std::string getSurname() = 0;
+		virtual std::string getRole() = 0;
 		virtual std::string getPhoneNumber() = 0;
 		virtual ~IUser(){std::cout << "Usuario destruido" << std::endl;}
 };

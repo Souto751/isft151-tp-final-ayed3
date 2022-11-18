@@ -26,6 +26,8 @@ class Ticket
     IStatus* getStatus();
     IUpdate* getComments();
     IUpdate* getQuestions();
+    std::vector<IUpdate*> getCommentsList();
+    std::vector<IUpdate*> getQuestionsList();
 
     ~Ticket();
 

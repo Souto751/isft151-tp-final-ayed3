@@ -12,6 +12,10 @@ void Client::setSurname(std::string _surname){
 	this->surname = _surname;
 }
 
+std::string Client::getRole(){
+	return "Client";
+}
+
 void Client::setPhoneNumber(std::string _phone){
 	this->phoneNumber = _phone;
 }

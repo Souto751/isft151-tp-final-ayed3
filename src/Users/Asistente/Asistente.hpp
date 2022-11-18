@@ -11,6 +11,7 @@ class Asistente : public IUser
 	    void setSurname(std::string);
 	    void setPhoneNumber(std::string);
 	    std::string getName();
+        std::string getRole();
 	    std::string getSurname();
 	    std::string getPhoneNumber();
         ~Asistente();

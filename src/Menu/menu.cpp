@@ -59,9 +59,15 @@ bool Menu::selectOption(){
 }
 
 void Menu::doAction(){
+    std::cin.clear();
+    fflush(stdin);
     if(this->option == 1){
-        // MODIFICAR EL METODO PARA PASARLE SOLAMENTE EL OBJETO USUARIO
-        // this->g_tickets->createTicket(this->g_users->getUser());
+        
+        if(this->g_users->getUser()->getRole() == "Client"){
+            this->g_tickets->createTicket(this->g_users->getUser(), NULL);
+        }else if(this->g_users->getUser()->getRole() == "Asistente"){
+            this->g_tickets->createTicket(NULL, this->g_users->getUser());
+        }
     }else if(this->option == 2){
         // MOSTRAR LA LISTA DE LOS TICKETS CON SU ID, PARA LUEGO SELECCIONAR EL QUE SE QUIERE MOSTRAR
         // AGREGAR FUNCION PARA OBTENER TICKET PASANDO ID
@@ -158,9 +164,6 @@ void Menu::run(){
     
     if(this->selectOption()){
         if(this->g_users->isLogged()){
-
-            // AGREGAR MÉTODOS PARA QUE SE RELLENEN TANTO LOS TICKETS COMO LAS NOTIFICACIONES
-            // DE ACUERDO AL USUARIO QUE SE LOGUEO
 
             if(this->option == 7){
                 this->logout();
